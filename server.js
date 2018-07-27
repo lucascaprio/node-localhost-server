@@ -5,8 +5,8 @@ const express    = require('express')
 const serveIndex = require('serve-index')
 const app        = express()
 
-const privateKey  = fs.readFileSync('server.key', 'utf8')
-const certificate = fs.readFileSync('server.cert', 'utf8')
+const privateKey  = fs.readFileSync('certs/server.key', 'utf8')
+const certificate = fs.readFileSync('certs/server.cert', 'utf8')
 
 const vhost = (hostname, app) => (req, res, next) => {
     const host = req.headers.host.split(':')[0]
