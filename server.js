@@ -37,11 +37,3 @@ const httpsServer = https.createServer({ key: privateKey, cert: certificate }, a
 
 httpServer.listen(80, () => console.log('Server listening on port 80.'))
 httpsServer.listen(443, () => console.log('Server listening on port 443.'))
-
-
-// Enable your user to run node apps on the default HTTP port (80)
-// sudo apt-get install libcap2-bin
-// sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
-
-// References
-// https://www.youtube.com/watch?v=GV3hWa5VIQg
