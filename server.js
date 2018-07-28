@@ -20,7 +20,6 @@ const vhost = (hostname, app) => (req, res, next) => {
     }
 }
 
-
 // Configure your vhosts here
 app.use(vhost('example.com(\.br)?', express()
     .get('/', (req, res) => res.sendFile(__dirname + '/projects/example/index.html'))
@@ -30,7 +29,6 @@ app.use(vhost('example.com(\.br)?', express()
 
 // localhost with directory listing
 app.use('/', express.static('projects'), serveIndex('projects'))
-
 
 const httpServer  = http.createServer(app)
 const httpsServer = https.createServer({ key: privateKey, cert: certificate }, app)
