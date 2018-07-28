@@ -38,6 +38,13 @@ $ sudo apt-get install libcap2-bin
 $ sudo setcap cap_net_bind_service=+ep `readlink -f \`which node\``
 ```
 
+#### Consider use [PM2](http://pm2.keymetrics.io/)
+
+You can start the server with:
+```sh
+$ pm2 start server.js
+```
+
 #### References
 
 * [Vhost com NodeJS e Express](https://www.youtube.com/watch?v=GV3hWa5VIQg)
