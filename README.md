@@ -52,10 +52,10 @@ npm run start
 
 #### List
 ```sh
-npm run start
+npm run list
 ```
 
-#### List
+#### Stop
 ```sh
 npm run stop
 ```
