@@ -1,11 +1,13 @@
 {
   "name": "node-localhost-server",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Node.js server for localhost environment.",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "./node_modules/.bin/pm2 start server.js",
+    "list": "./node_modules/.bin/pm2 list",
+    "stop": "./node_modules/.bin/pm2 stop server.js"
   },
   "author": "Lucas Caprio <lucasfernandescaprio@gmail.com>",
   "license": "GPL-3.0",
@@ -14,6 +16,7 @@
     "fs": "0.0.1-security",
     "http": "0.0.0",
     "https": "^1.0.0",
+    "pm2": "^5.1.2",
     "serve-index": "^1.9.1"
   }
 }
